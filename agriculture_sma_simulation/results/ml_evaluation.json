@@ -1,0 +1,10 @@
+{
+  "status": "insufficient_data",
+  "target": "base_yield_t_ha",
+  "model_name": "unavailable",
+  "ml_weight": 0.0,
+  "message": "Not enough distinct crop-year observations for supervised regression training.",
+  "total_rows": 4,
+  "feature_columns": [],
+  "metrics": {}
+}

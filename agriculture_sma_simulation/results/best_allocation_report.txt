@@ -1,0 +1,71 @@
+Multi-Agent System for Moroccan Agricultural Optimization
+
+Data mode: fallback_demo_sample
+Context: National Morocco, 2020
+Precipitation: 255.6 mm
+Decision surface: 1200 ha
+
+Best Scenario
+- Scenario: 100% Oranges
+- Allocation: 100% of land to Oranges
+- Focus crop: Oranges
+- Farm type: irrigated
+- Weighted expected yield: 14.88 t/ha
+- Total expected output: 17850.7 tonnes
+- Fuzzy suitability score: 0.40
+- Resource balance score: 0.57
+- Optimization score: 0.67
+- ML predicted yield: 18.40 t/ha
+- Why it won: Selected because it combines optimization score 0.67, output 17850.7 t, yield 14.88 t/ha, fuzzy suitability 0.40, resource balance 0.57.
+
+Supervised ML Layer
+- Status: insufficient_data
+- Message: Not enough distinct crop-year observations for supervised regression training.
+- Target: base_yield_t_ha
+- Model: unavailable
+- Total rows: 4
+- Train rows: 0
+- Test rows: 0
+- Test MAE: 0.0000
+- Test MSE: 0.0000
+- Test RMSE: 0.0000
+- Test R^2: 0.0000
+- Test RMSLE: n/a
+
+Final Explanation
+For National Morocco in 2020, the optimizer recommends 100% Oranges because it combines the highest optimization score (0.67), strong fuzzy suitability (0.40), and expected production of 17850.7 tonnes. The margin over the next scenario is 13769.6 tonnes.
+
+Scenario Ranking
+1. 100% Oranges | irrigated | score 0.67 | 14.88 t/ha | 17850.7 tonnes
+2. 100% Olives | mixed | score 0.26 | 3.40 t/ha | 4081.1 tonnes
+
+Official Files Loaded
+- Fallback demo sample
+
+Real Official Columns Used
+- occurrence
+- filiere
+- produit
+- indicateur
+- valeur
+- production_tonnes
+- surface_ha
+
+Derived Columns Used
+- yield_t_per_ha
+- soil_quality_index_derived
+- water_availability_index_derived
+- climate_favorability_index_derived
+- fertilizer_efficiency_index_derived
+- resource_balance_index_derived
+- normalized_base_yield_score
+- normalized_surface_score
+- normalized_production_score
+- normalized_stability_score
+- normalized_trend_score
+- decision_surface_ha_derived
+
+Derived Variables
+- fallback_demo_sample: Fallback sample used only when the official Moroccan Excel files are missing or unreadable.
+- resource_balance_index_derived: Derived in fallback mode to preserve normalized resource scaling for the simulation.
+- yield_reference_t_ha_derived: Derived in fallback mode to preserve bounded yield scaling across agents.
